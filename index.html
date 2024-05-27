@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Travel Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#plan">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Travel Planner</h2>
+        <p>Discover and plan your next adventure!</p>
+    </section>
+
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-card" id="bengaluru">
+            <img src="images/bengaluru.jpg" alt="Bengaluru">
+            <h3>Bengaluru</h3>
+        </div>
+        <div class="destination-card" id="delhi">
+            <img src="images/delhi.jpg" alt="Delhi">
+            <h3>Delhi</h3>
+        </div>
+        <div class="destination-card" id="mumbai">
+            <img src="images/mumbai.jpg" alt="Mumbai">
+            <h3>Mumbai</h3>
+        </div>
+        <div class="destination-card" id="goa">
+            <img src="images/goa.jpg" alt="Goa">
+            <h3>Goa</h3>
+        </div>
+    </section>
+
+    <section id="plan">
+        <h2>Plan Your Trip</h2>
+        <form id="tripForm">
+            <label for="destination">Choose Destination:</label>
+            <select id="destination" name="destination">
+                <option value="bengaluru">Bengaluru</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="goa">Goa</option>
+            </select>
+            <br>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <br>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travel Planner</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
